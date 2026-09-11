@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Summer Vacation – Question Forms Exercise</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 800px; margin: 20px auto; line-height: 1.6; }
+  h1, h2 { color: #0057b8; }
+  .question { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; border-radius: 8px; }
+  .options button { margin: 5px; padding: 8px 12px; cursor: pointer; }
+  .feedback { margin-top: 10px; font-weight: bold; }
+  .correct { color: #2e7d32; }
+  .incorrect { color: #c62828; }
+</style>
+<script>
+  function check(id, correct, chosen) {
+    const fb = document.getElementById(id);
+    if (chosen === correct) {
+      fb.textContent = "✔ Correct!";
+      fb.className = "feedback correct";
+    } else {
+      fb.textContent = "✘ Incorrect. Try again.";
+      fb.className = "feedback incorrect";
+    }
+  }
+</script>
+</head>
+
+<body>
+
+<h1>Summer Vacation – Interactive Question Forms</h1>
+<p>Click an answer to check your understanding.</p>
+
+<!-- 1 -->
+<div class="question">
+  <p><strong>1. « Est-ce que tu pars en Italie cet été ? »</strong></p>
+  <div class="options">
+    <button onclick="check('fb1','C','A')">A. Do you go to Italy this summer?</button>
+    <button onclick="check('fb1','C','B')">B. Are you go to Italy this summer?</button>
+    <button onclick="check('fb1','C','C')">C. Are you going to Italy this summer?</button>
+  </div>
+  <div id="fb1" class="feedback"></div>
+</div>
+
+<!-- 2 -->
+<div class="question">
+  <p><strong>2. « Est-ce que vos amis ont loué une maison de vacances ? »</strong></p>
+  <div class="options">
+    <button onclick="check('fb2','B','A')">A. Do your friends rent a holiday house?</button>
+    <button onclick="check('fb2','B','B')">B. Did your friends rent a holiday house?</button>
+    <button onclick="check('fb2','B','C')">C. Have your friends rent a holiday house?</button>
+  </div>
+  <div id="fb2" class="feedback"></div>
+</div>
+
+<!-- 3 -->
+<div class="question">
+  <p><strong>3. « Qui a préparé le barbecue ? »</strong></p>
+  <div class="options">
+    <button onclick="check('fb3','B','A')">A. Who did prepare the barbecue?</button>
+    <button onclick="check('fb3','B','B')">B. Who prepared the barbecue?</button>
+    <button onclick="check('fb3','B','C')">C. Who has prepared the barbecue?</button>
+  </div>
+  <div id="fb3" class="feedback"></div>
+</div>
+
+<!-- 4 -->
+<div class="question">
+  <p><strong>4. « Qu'est-ce qui t'a réveillé au camping ? »</strong></p>
+  <div class="options">
+    <button onclick="check('fb4','B','A')">A. What did wake you up at the campsite?</button>
+    <button onclick="check('fb4','B','B')">B. What woke you up at the campsite?</button>
+    <button onclick="check('fb4','B','C')">C. What has woke you up at the campsite?</button>
+  </div>
+  <div id="fb4" class="feedback"></div>
+</div>
+
+<!-- 5 -->
+<div class="question">
+  <p><strong>5. Indirect question: "Where is the beach?"</strong></p>
+  <div class="options">
+    <button onclick="check('fb5','B','A')">A. Can you tell me where is the beach?</button>
+    <button onclick="check('fb5','B','B')">B. Can you tell me where the beach is?</button>
+    <button onclick="check('fb5','B','C')">C. Do you know where is the beach?</button>
+  </div>
+  <div id="fb5" class="feedback"></div>
+</div>
+
+<!-- 6 -->
+<div class="question">
+  <p><strong>6. Indirect question: "When does the bus leave?"</strong></p>
+  <div class="options">
+    <button onclick="check('fb6','A','A')">A. Do you know when the bus leaves?</button>
+    <button onclick="check('fb6','A','B')">B. Do you know when does the bus leave?</button>
+    <button onclick="check('fb6','A','C')">C. Can you tell me when does the bus leave?</button>
+  </div>
+  <div id="fb6" class="feedback"></div>
+</div>
+
+<!-- 7 -->
+<div class="question">
+  <p><strong>7. You booked your trip early, … ?</strong></p>
+  <div class="options">
+    <button onclick="check('fb7','B','A')">A. aren't you?</button>
+    <button onclick="check('fb7','B','B')">B. didn't you?</button>
+    <button onclick="check('fb7','B','C')">C. don't you?</button>
+  </div>
+  <div id="fb7" class="feedback"></div>
+</div>
+
+<!-- 8 -->
+<div class="question">
+  <p><strong>8. You're not staying at a hotel, … ?</strong></p>
+  <div class="options">
+    <button onclick="check('fb8','B','A')">A. aren't you?</button>
+    <button onclick="check('fb8','B','B')">B. are you?</button>
+    <button onclick="check('fb8','B','C')">C. do you?</button>
+  </div>
+  <div id="fb8" class="feedback"></div>
+</div>
+
+<!-- 9 -->
+<div class="question">
+  <p><strong>9. « Est-ce que tu as déjà visité la Grèce ? »</strong></p>
+  <div class="options">
+    <button onclick="check('fb9','B','A')">A. Do you visited Greece before?</button>
+    <button onclick="check('fb9','B','B')">B. Have you visited Greece before?</button>
+    <button onclick="check('fb9','B','C')">C. Did you have visited Greece before?</button>
+  </div>
+  <div id="fb9" class="feedback"></div>
+</div>
+
+<!-- 10 -->
+<div class="question">
+  <p><strong>10. It's your first time camping, … ?</strong></p>
+  <div class="options">
+    <button onclick="check('fb10','A','A')">A. isn't it?</button>
+    <button onclick="check('fb10','A','B')">B. is it?</button>
+    <button onclick="check('fb10','A','C')">C. doesn't it?</button>
+  </div>
+  <div id="fb10" class="feedback"></div>
+</div>
+
+</body>
+</html>
